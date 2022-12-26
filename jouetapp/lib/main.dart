@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:carousel_pro/carousel_pro.dart';
-
+// My own imports
+import 'package:jouetapp/componets/horizontal_listview.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
@@ -150,7 +151,14 @@ class _HomePageState extends State<HomePage> {
       ),
       body: ListView(
         children: <Widget>[
+          //imageCarousel begins
           imageCarousel,
+          // padding widget
+          const Padding(padding: EdgeInsets.all(8.0),
+          child: Text('Catégories'),
+          ),
+          //horizontal liste views
+          const HorizontaList(),
         ]
       ),
     );
