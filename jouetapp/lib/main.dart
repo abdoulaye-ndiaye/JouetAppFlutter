@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 // My own imports
 import 'package:jouetapp/componets/horizontal_listview.dart';
+import 'package:jouetapp/componets/products.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
@@ -20,28 +21,28 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-  // ignore: unused_local_variable
-  Widget imageCarousel = SizedBox(
-    height: 200.0,
-    child: Carousel(
-      boxFit: BoxFit.cover,
-      images: const [
-        AssetImage('images/produits/image1.jpeg'),
-        AssetImage('images/produits/image2.jpeg'),
-        AssetImage('images/produits/image3.jpeg'),
-        AssetImage('images/produits/image4.jpeg'),
-        AssetImage('images/produits/image5.jpeg'),
-        AssetImage('images/produits/image6.jpeg'),
-        AssetImage('images/produits/image7.jpeg'),
-      ],
-      autoplay: true,
-      animationCurve: Curves.fastOutSlowIn,
-      animationDuration: const Duration(milliseconds: 1000),
-      dotSize: 4.0,
-      dotColor: Colors.redAccent,
-      indicatorBgPadding: 2.0,
-    ),
-  );
+    // ignore: unused_local_variable
+    Widget imageCarousel = SizedBox(
+      height: 200.0,
+      child: Carousel(
+        boxFit: BoxFit.cover,
+        images: const [
+          AssetImage('images/produits/image1.jpeg'),
+          AssetImage('images/produits/image2.jpeg'),
+          AssetImage('images/produits/image3.jpeg'),
+          AssetImage('images/produits/image4.jpeg'),
+          AssetImage('images/produits/image5.jpeg'),
+          AssetImage('images/produits/image6.jpeg'),
+          AssetImage('images/produits/image7.jpeg'),
+        ],
+        autoplay: true,
+        animationCurve: Curves.fastOutSlowIn,
+        animationDuration: const Duration(milliseconds: 1000),
+        dotSize: 4.0,
+        dotColor: Colors.redAccent,
+        indicatorBgPadding: 2.0,
+      ),
+    );
 
     return Scaffold(
       appBar: AppBar(
@@ -125,7 +126,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         Divider(),
-          InkWell(
+        InkWell(
           onTap: null,
           child: ListTile(
             title: Text('réglages'),
@@ -145,22 +146,29 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ),
-          
-      ]
-      )
-      ),
-      body: ListView(
-        children: <Widget>[
-          //imageCarousel begins
-          imageCarousel,
-          // padding widget
-          const Padding(padding: EdgeInsets.all(8.0),
+      ])),
+      body: ListView(children: <Widget>[
+        //imageCarousel begins
+        imageCarousel,
+        // padding widget
+        const Padding(
+          padding: EdgeInsets.all(8.0),
           child: Text('Catégories'),
-          ),
-          //horizontal liste views
-          const HorizontaList(),
-        ]
-      ),
+        ),
+        //horizontal liste views
+        const HorizontaList(),
+        // padding widget
+        const Padding(
+          padding: EdgeInsets.all(20.0),
+          child: Text('Récents produits'),
+        ),
+        //grid view
+        // ignore: prefer_const_constructors
+        SizedBox(
+          height: 320.0,
+          child: const Products(),
+        )
+      ]),
     );
   }
 }
