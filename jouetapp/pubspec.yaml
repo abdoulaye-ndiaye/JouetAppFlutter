@@ -67,6 +67,25 @@ flutter:
     - images/produits/image5.jpeg
     - images/produits/image6.jpeg
     - images/produits/image7.jpeg
+    - images/produits/image8.jpeg
+    - images/produits/image9.jpeg
+    - images/produits/image10.jpeg
+    - images/produits/image11.jpeg
+    - images/produits/image12.jpeg
+    - images/produits/image13.jpeg
+    - images/produits/image14.jpeg
+    - images/produits/image15.jpeg
+    - images/produits/image16.jpeg
+    - images/produits/image17.jpeg
+    - images/produits/image18.jpeg
+    - images/produits/image19.jpeg
+    - images/produits/image20.jpeg
+    - images/produits/image21.jpeg
+    - images/produits/image22.jpeg
+    - images/produits/image23.jpeg
+    - images/produits/image24.jpeg
+    - images/produits/image25.jpeg
+    - images/produits/téléchargement.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
