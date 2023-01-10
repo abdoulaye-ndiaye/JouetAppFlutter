@@ -7,6 +7,7 @@ import 'package:carousel_pro/carousel_pro.dart';
 import 'package:jouetapp/componets/horizontal_listview.dart';
 import 'package:jouetapp/componets/products.dart';
 import 'package:jouetapp/pages/cart.dart';
+import 'package:jouetapp/pages/compte.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
@@ -44,7 +45,7 @@ class _HomePageState extends State<HomePage> {
         animationCurve: Curves.fastOutSlowIn,
         animationDuration: const Duration(milliseconds: 1000),
         dotSize: 4.0,
-        dotColor: Colors.redAccent,
+        dotColor: const Color.fromARGB(255, 162, 28, 64),
         indicatorBgPadding: 2.0,
       ),
     );
@@ -52,7 +53,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.1,
-        backgroundColor: Colors.redAccent,
+        backgroundColor: const Color.fromARGB(255, 162, 28, 64),
         title: const Text('Boutique de Jouet'),
         actions: <Widget>[
           IconButton(
@@ -71,15 +72,16 @@ class _HomePageState extends State<HomePage> {
           child: ListView(children: <Widget>[
         UserAccountsDrawerHeader(
           accountName: Text('Abdoulaye ndiaye'),
-          accountEmail: Text('Abdoualaye.ndiaye@gmail.com'),
+          accountEmail: Text('Abdoualaye3.ndiaye@uadb.edu.sn'),
           currentAccountPicture: CircleAvatar(
               backgroundColor: Colors.blueGrey,
               child: Icon(
                 Icons.person,
                 color: Colors.white,
-              )),
+              )
+              ),
           decoration: BoxDecoration(
-            color: Colors.redAccent,
+            color: const Color.fromARGB(255, 162, 28, 64),
           ),
         ),
         InkWell(
@@ -90,17 +92,19 @@ class _HomePageState extends State<HomePage> {
             title: Text("Page d'accueil"),
             leading: Icon(
               Icons.home,
-              color: Colors.redAccent,
+              color: const Color.fromARGB(255, 162, 28, 64),
             ),
           ),
         ),
         InkWell(
-          onTap: null,
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => MonComptePage()));
+          },
           child: ListTile(
             title: Text('Mon compte'),
             leading: Icon(
               Icons.person,
-              color: Colors.redAccent,
+              color: const Color.fromARGB(255, 162, 28, 64),
             ),
           ),
         ),
@@ -110,7 +114,7 @@ class _HomePageState extends State<HomePage> {
             title: Text('Mes commandes'),
             leading: Icon(
               Icons.shopping_basket,
-              color: Colors.redAccent,
+              color: const Color.fromARGB(255, 162, 28, 64),
             ),
           ),
         ),
@@ -122,7 +126,7 @@ class _HomePageState extends State<HomePage> {
             title: Text('Panier'),
             leading: Icon(
               Icons.shopping_cart,
-              color: Colors.redAccent,
+              color: const Color.fromARGB(255, 162, 28, 64),
             ),
           ),
         ),
@@ -132,7 +136,7 @@ class _HomePageState extends State<HomePage> {
             title: Text('Favoris'),
             leading: Icon(
               Icons.favorite,
-              color: Colors.redAccent,
+              color: const Color.fromARGB(255, 162, 28, 64),
             ),
           ),
         ),

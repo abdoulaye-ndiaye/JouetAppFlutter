@@ -86,7 +86,7 @@ class Single_cart_product extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(4.0),
-                  child: Text(cart_size, style: const TextStyle(color: Colors.redAccent)),
+                  child: Text(cart_size, style: const TextStyle(color: Color.fromARGB(255, 162, 28, 64))),
                 ),
                 const Padding(
                   padding: EdgeInsets.fromLTRB(20.0, 8.0, 8.0, 8.0),
@@ -94,13 +94,13 @@ class Single_cart_product extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(4.0),
-                  child: Text(cart_color, style: const TextStyle(color: Colors.redAccent)),
+                  child: Text(cart_color, style: const TextStyle(color:Color.fromARGB(255, 162, 28, 64))),
                 ),
               ],
             ),
             Container(
               alignment: Alignment.topLeft,
-              child: Text("\$$cart_price", style: const TextStyle(fontSize: 17.0, fontWeight: FontWeight.bold, color: Colors.red)),
+              child: Text("\$$cart_price", style: const TextStyle(fontSize: 17.0, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 162, 28, 64))),
             ),
           ],
         ),

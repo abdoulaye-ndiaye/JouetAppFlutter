@@ -1,6 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, prefer_const_constructors_in_immutables, prefer_typing_uninitialized_variables, use_key_in_widget_constructors, camel_case_types, library_private_types_in_public_api
 
 import 'package:flutter/material.dart';
+import 'package:jouetapp/pages/cart.dart';
 
 class ProductDetails extends StatefulWidget {
   final product_detail_name;
@@ -24,7 +25,7 @@ class _ProductDetailsState extends State<ProductDetails>{
     return Scaffold(
       appBar: AppBar(
         elevation: 0.1,
-        backgroundColor: Colors.red,
+        backgroundColor: const Color.fromARGB(255, 162, 28, 64),
         title: InkWell(
           onTap: () {
             Navigator.pop(context);
@@ -38,7 +39,9 @@ class _ProductDetailsState extends State<ProductDetails>{
           ),
           IconButton(
             icon: const Icon(Icons.shopping_cart, color: Colors.white),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const Cart()));
+            },
           ),
         ],
       ),
@@ -67,7 +70,7 @@ class _ProductDetailsState extends State<ProductDetails>{
                         child: Text(
                           "\$${widget.product_detail_new_price}",
                           style: const TextStyle(
-                              fontWeight: FontWeight.bold, color: Colors.red),
+                              fontWeight: FontWeight.bold, color: Color.fromARGB(255, 162, 28, 64)),
                         ),
                       ),
                     ],
@@ -206,7 +209,7 @@ class _ProductDetailsState extends State<ProductDetails>{
               Expanded(
                 child: MaterialButton(
                   onPressed: () {},
-                  color: Colors.red,
+                  color: const Color.fromARGB(255, 162, 28, 64),
                   textColor: Colors.white,
                   elevation: 0.2,
                   child: const Text('Buy now'),
@@ -214,12 +217,12 @@ class _ProductDetailsState extends State<ProductDetails>{
               ),
               IconButton(
                 icon: const Icon(Icons.add_shopping_cart),
-                color: Colors.red,
+                color: const Color.fromARGB(255, 162, 28, 64),
                 onPressed: () {},
               ),
               IconButton(
                 icon: const Icon(Icons.favorite_border),
-                color: Colors.red,
+                color: const Color.fromARGB(255, 162, 28, 64),
                 onPressed: () {},
               ),
             ],

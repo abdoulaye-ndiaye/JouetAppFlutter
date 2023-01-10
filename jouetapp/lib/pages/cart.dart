@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 // my own imports
 import 'package:jouetapp/componets/cart_products.dart';
+import 'package:jouetapp/pages/livraison.dart';
 
 class Cart extends StatefulWidget {
   const Cart({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class _CartState extends State<Cart> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.1,
-        backgroundColor: Colors.redAccent,
+        backgroundColor: const Color.fromARGB(255, 162, 28, 64),
         title: InkWell(
           onTap: () {
             Navigator.pop(context);
@@ -33,7 +34,7 @@ class _CartState extends State<Cart> {
       ),
       body: Cart_products(),
       bottomNavigationBar: SizedBox(
-        height: 50,
+        height: 70,
         child: Row(
           children: <Widget>[
             Expanded(
@@ -44,12 +45,14 @@ class _CartState extends State<Cart> {
             ),
             Expanded(
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => DeliveryPage()));
+                },
                 child: const Text(
                   'Commander',
                   style: TextStyle(color: Colors.white),
                 ),
-                color: Colors.redAccent,
+                color: const Color.fromARGB(255, 162, 28, 64),
               ),
             ),
           ],
