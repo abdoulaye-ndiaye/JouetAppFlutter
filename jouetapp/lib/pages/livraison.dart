@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:intl/intl.dart';
+import 'package:jouetapp/pages/payment.dart';
 
 class DeliveryPage extends StatefulWidget {
   const DeliveryPage({Key? key}) : super(key: key);
@@ -105,6 +106,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                       if (_formKey.currentState!.validate()) {
                         // Save the delivery information
                         //...
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => MySample()));
                       }
                     },
                     color: const Color.fromARGB(255, 162, 28, 64),
