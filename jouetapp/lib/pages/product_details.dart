@@ -19,7 +19,8 @@ class ProductDetails extends StatefulWidget {
   @override
   _ProductDetailsState createState() => _ProductDetailsState();
 }
-class _ProductDetailsState extends State<ProductDetails>{
+
+class _ProductDetailsState extends State<ProductDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +41,8 @@ class _ProductDetailsState extends State<ProductDetails>{
           IconButton(
             icon: const Icon(Icons.shopping_cart, color: Colors.white),
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const Cart()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Cart()));
             },
           ),
         ],
@@ -55,22 +57,25 @@ class _ProductDetailsState extends State<ProductDetails>{
                 child: ListTile(
                   leading: Text(
                     widget.product_detail_name,
-                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 16.0),
                   ),
                   title: Row(
                     children: <Widget>[
                       Expanded(
                         child: Text(
-                          "\$${widget.product_detail_old_price}",
+                          "${widget.product_detail_old_price} Fr",
                           style: const TextStyle(
-                              color: Colors.grey, decoration: TextDecoration.lineThrough),
+                              color: Colors.grey,
+                              decoration: TextDecoration.lineThrough),
                         ),
                       ),
                       Expanded(
                         child: Text(
-                          "\$${widget.product_detail_new_price}",
+                          "${widget.product_detail_new_price} Fr",
                           style: const TextStyle(
-                              fontWeight: FontWeight.bold, color: Color.fromARGB(255, 162, 28, 64)),
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 162, 28, 64)),
                         ),
                       ),
                     ],
@@ -84,131 +89,132 @@ class _ProductDetailsState extends State<ProductDetails>{
             ),
           ),
           // ============== the first buttons ==============
-          Row(
-            children: <Widget>[
-              // ============== the size button ==============
-              Expanded(
-                child: MaterialButton(
-                  onPressed: () {
-                    showDialog(
-                        context: context,
-                        builder: (context) {
-                          return AlertDialog(
-                            title: const Text('Size'),
-                            content: const Text('Choose the size'),
-                            actions: <Widget>[
-                              MaterialButton(
-                                onPressed: (){
-                                  Navigator.of(context).pop(context);
-                                },
-                                child: const Text('close'),
-                              )
-                            ],
-                          );
-                        });
-                  },
-                  color: Colors.white,
-                  textColor: Colors.grey,
-                  elevation: 0.2,
-                  child: Row(
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: <Widget>[
-                      const Expanded(
-                        child: Text('Size'),
-                      ),
-                      const Expanded(
-                        child: Icon(Icons.arrow_drop_down),
-                      ),
-                       
-                    ],
-                  ),
+          Row(children: <Widget>[
+            // ============== the size button ==============
+            Expanded(
+              child: MaterialButton(
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: const Text('Size'),
+                          content: const Text('Choose the size'),
+                          actions: <Widget>[
+                            MaterialButton(
+                              onPressed: () {
+                                Navigator.of(context).pop(context);
+                              },
+                              child: const Text('close'),
+                            )
+                          ],
+                        );
+                      });
+                },
+                color: Colors.white,
+                textColor: Colors.grey,
+                elevation: 0.2,
+                child: Row(
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: <Widget>[
+                    const Expanded(
+                      child: Text('Size'),
+                    ),
+                    const Expanded(
+                      child: Icon(Icons.arrow_drop_down),
+                    ),
+                  ],
                 ),
               ),
-              // ============== the size button ==============
-              Expanded(
-                child: MaterialButton(
-                  onPressed: () {
-                    showDialog(
-                        context: context,
-                        builder: (context) {
-                          return AlertDialog(
-                            title: const Text('color'),
-                            content: const Text('Choose the color'),
-                            actions: <Widget>[
-                              MaterialButton(
-                                onPressed: (){
-                                  Navigator.of(context).pop(context);
-                                },
-                                child: const Text('close'),
-                              )
-                            ],
-                          );
-                        });
-                  },
-                  color: Colors.white,
-                  textColor: Colors.grey,
-                  elevation: 0.2,
-                  child: Row(
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: <Widget>[
-                      const Expanded(
-                        child: Text('Color'),
-                      ),
-                      const Expanded(
-                        child: Icon(Icons.arrow_drop_down),
-                      ),
-                      ],
-                  ),
+            ),
+            // ============== the size button ==============
+            Expanded(
+              child: MaterialButton(
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: const Text('color'),
+                          content: const Text('Choose the color'),
+                          actions: <Widget>[
+                            MaterialButton(
+                              onPressed: () {
+                                Navigator.of(context).pop(context);
+                              },
+                              child: const Text('close'),
+                            )
+                          ],
+                        );
+                      });
+                },
+                color: Colors.white,
+                textColor: Colors.grey,
+                elevation: 0.2,
+                child: Row(
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: <Widget>[
+                    const Expanded(
+                      child: Text('Color'),
+                    ),
+                    const Expanded(
+                      child: Icon(Icons.arrow_drop_down),
+                    ),
+                  ],
                 ),
               ),
-                       // ============== the size button ==============
-              Expanded(
-                child: MaterialButton(
-                  onPressed: () {
-                    showDialog(
-                        context: context,
-                        builder: (context) {
-                          return AlertDialog(
-                            title: const Text('Quantity'),
-                            content: const Text('Choose the Quantity'),
-                            actions: <Widget>[
-                              MaterialButton(
-                                onPressed: (){
-                                  Navigator.of(context).pop(context);
-                                },
-                                child: const Text('close'),
-                              )
-                            ],
-                          );
-                        });
-                  },
-                  color: Colors.white,
-                  textColor: Colors.grey,
-                  elevation: 0.2,
-                  child: Row(
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: <Widget>[
-                      const Expanded(
-                        child: Text('Qty'),
-                      ),
-                      const Expanded(
-                        child: Icon(Icons.arrow_drop_down),
-                      ),
-                      ],
-                  ),
+            ),
+            // ============== the size button ==============
+            Expanded(
+              child: MaterialButton(
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: const Text('Quantity'),
+                          content: const Text('Choose the Quantity'),
+                          actions: <Widget>[
+                            MaterialButton(
+                              onPressed: () {
+                                Navigator.of(context).pop(context);
+                              },
+                              child: const Text('close'),
+                            )
+                          ],
+                        );
+                      });
+                },
+                color: Colors.white,
+                textColor: Colors.grey,
+                elevation: 0.2,
+                child: Row(
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: <Widget>[
+                    const Expanded(
+                      child: Text('Qty'),
+                    ),
+                    const Expanded(
+                      child: Icon(Icons.arrow_drop_down),
+                    ),
+                  ],
                 ),
               ),
-
-            ]  
-          ),
-              // ============== the
+            ),
+          ]),
+          // ============== the
           // ============== the second buttons ==============
           Row(
             children: <Widget>[
               // ============== the size button ==============
               Expanded(
                 child: MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => const Cart())));
+                  },
                   color: const Color.fromARGB(255, 162, 28, 64),
                   textColor: Colors.white,
                   elevation: 0.2,
@@ -232,7 +238,8 @@ class _ProductDetailsState extends State<ProductDetails>{
           ),
           const ListTile(
             title: Text('Product details'),
-            subtitle: Text("Ce jouet en bois est recommandé pour les enfants âgés de 3 à 6 ans. Il mesure 20 cm de haut et pèse environ 500 grammes. Sa couleur jaune vif et ses formes géométriques en font un jouet amusant et attractif. Le jouet est multifonctionnel, avec des éléments qui tournent, glissent et s'emboîtent. Il aide les enfants à développer leur motricité fine et leur pensée logique. Le jouet a été conçu avec des matériaux de qualité et respecte les normes de sécurité en vigueur. Veillez à utiliser le jouet sous la supervision d'un adulte."),
+            subtitle: Text(
+                "Ce jouet en bois est recommandé pour les enfants âgés de 3 à 6 ans. Il mesure 20 cm de haut et pèse environ 500 grammes. Sa couleur jaune vif et ses formes géométriques en font un jouet amusant et attractif. Le jouet est multifonctionnel, avec des éléments qui tournent, glissent et s'emboîtent. Il aide les enfants à développer leur motricité fine et leur pensée logique. Le jouet a été conçu avec des matériaux de qualité et respecte les normes de sécurité en vigueur. Veillez à utiliser le jouet sous la supervision d'un adulte."),
           ),
           const Divider(
             color: Colors.grey,
@@ -295,12 +302,10 @@ class _ProductDetailsState extends State<ProductDetails>{
             height: 360.0,
             child: Similar_products(),
           ),
-          
-    ],
-    ),
+        ],
+      ),
     );
   }
-
 }
 
 class Similar_products extends StatefulWidget {
@@ -308,38 +313,39 @@ class Similar_products extends StatefulWidget {
   _Similar_productsState createState() => _Similar_productsState();
 }
 
-class _Similar_productsState extends State<Similar_products>{
-  var product_list=[
+class _Similar_productsState extends State<Similar_products> {
+  var product_list = [
     {
-      "name": "jouer 1",
-      "picture": "images/produits/image25.jpeg",
-      "old_price": 120,
-      "price": 85,
+      "name": "voiture",
+      "picture": "images/image.jpeg",
+      "old_price": 12050,
+      "price": 8050,
     },
     {
-      "name": "jouer 1",
-      "picture": "images/produits/image1.jpeg",
-      "old_price": 120,
-      "price": 85,
+      "name": "voiture",
+      "picture": "images/images1.jpeg",
+      "old_price": 15000,
+      "price": 7500,
     },
     {
-      "name": "jouer 1",
-      "picture": "images/produits/image3.jpeg",
-      "old_price": 120,
-      "price": 85,
+      "name": "voiture",
+      "picture": "images/images3.jpeg",
+      "old_price": 24000,
+      "price": 9050,
     },
     {
-      "name": "jouer 1",
-      "picture": "images/produits/image14.jpeg",
-      "old_price": 120,
-      "price": 85,
+      "name": "voiture",
+      "picture": "images/images17.jpeg",
+      "old_price": 17200,
+      "price": 5300,
     },
   ];
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
         itemCount: product_list.length,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        gridDelegate:
+            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (BuildContext context, int index) {
           return Similar_single_prod(
             prod_name: product_list[index]['name'],
@@ -348,8 +354,9 @@ class _Similar_productsState extends State<Similar_products>{
             prod_price: product_list[index]['price'],
           );
         });
-    }
+  }
 }
+
 class Similar_single_prod extends StatelessWidget {
   final prod_name;
   final prod_picture;
@@ -373,20 +380,28 @@ class Similar_single_prod extends StatelessWidget {
             onTap: () => Navigator.of(context).push(MaterialPageRoute(
                 // here we are passing the values of the product to the product details page
                 builder: (context) => ProductDetails(
-                  product_detail_name: prod_name,
-                  product_detail_new_price: prod_price,
-                  product_detail_old_price: prod_old_price,
-                  product_detail_picture: prod_picture,
-                ))),
+                      product_detail_name: prod_name,
+                      product_detail_new_price: prod_price,
+                      product_detail_old_price: prod_old_price,
+                      product_detail_picture: prod_picture,
+                    ))),
             child: GridTile(
                 footer: Container(
                   color: Colors.white70,
-                  child:  Row(
+                  child: Row(
                     children: <Widget>[
                       Expanded(
-                        child: Text(prod_name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),),
+                        child: Text(
+                          prod_name,
+                          style: const TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 16.0),
+                        ),
                       ),
-                      Text("\$$prod_price", style: const TextStyle(color: Colors.red, fontWeight: FontWeight.bold),)
+                      Text(
+                        "$prod_price Fr",
+                        style: const TextStyle(
+                            color: Colors.red, fontWeight: FontWeight.bold),
+                      )
                     ],
                   ),
                 ),

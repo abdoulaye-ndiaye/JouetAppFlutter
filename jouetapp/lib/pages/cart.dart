@@ -40,7 +40,7 @@ class _CartState extends State<Cart> {
             Expanded(
               child: ListTile(
                 title: const Text('Total:'),
-                subtitle: const Text('\$295'),
+                subtitle: const Text('39000 FR'),
               ),
             ),
             Expanded(

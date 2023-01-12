@@ -14,40 +14,40 @@ class Products extends StatefulWidget {
 class _ProductsState extends State<Products> {
   var product_list=[
     {
-      "name": "jouer 1",
-      "picture": "images/produits/image1.jpeg",
-      "old_price": 120,
-      "price": 85,
+      "name": "Voiture",
+      "picture": "images/images2.jpeg",
+      "old_price": 12000,
+      "price": 8500,
     },
     {
-      "name": "jouer 2",
-      "picture": "images/produits/image2.jpeg",
-      "old_price": 150,
-      "price": 105,
+      "name": "Pistolet",
+      "picture": "images/images4.jpeg",
+      "old_price": 150000,
+      "price": 10500,
     },
     {
-      "name": "jouer 3",
-      "picture": "images/produits/image3.jpeg",
-      "old_price": 125,
-      "price": 85,
+      "name": "Ball",
+      "picture": "images/images8.jpeg",
+      "old_price": 12500,
+      "price": 8500,
     },
     {
-      "name": "jouer 4",
-      "picture": "images/produits/image4.jpeg",
-      "old_price": 220,
-      "price": 185,
+      "name": "Piano",
+      "picture": "images/images12.jpeg",
+      "old_price": 22000,
+      "price": 18500,
     },
     {
-      "name": "jouer 5",
-      "picture": "images/produits/image20.jpeg",
-      "old_price": 2200,
+      "name": "Roller",
+      "picture": "images/images20.jpeg",
+      "old_price": 225000,
       "price": 1500,
     },
     {
       "name": "jouer 6",
-      "picture": "images/produits/image14.jpeg",
-      "old_price": 250,
-      "price": 145,
+      "picture": "images/images21.jpeg",
+      "old_price": 21250,
+      "price": 14500,
     },
   ];
   @override
@@ -104,7 +104,7 @@ class Single_prod extends StatelessWidget {
                       Expanded(
                         child: Text(prod_name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),),
                       ),
-                      Text("\$$prod_price", style: const TextStyle(color: Colors.red, fontWeight: FontWeight.bold),)
+                      Text("$prod_price Fr", style: const TextStyle(color: Colors.red, fontWeight: FontWeight.bold),)
                     ],
                   ),
                 ),

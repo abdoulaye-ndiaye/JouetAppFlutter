@@ -11,16 +11,16 @@ class HorizontaList extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           Category(
-            imageLocation: 'images/produits/image5.jpeg',
-            imageCaption: 'Jouet 1',
+            imageLocation: 'images/images22.jpeg',
+            imageCaption: 'Velo',
           ),
           Category(
-            imageLocation: 'images/produits/image2.jpeg',
-            imageCaption: 'Jouet 2',
+            imageLocation: 'images/images23.jpeg',
+            imageCaption: 'Play',
           ),
           Category(
-            imageLocation: 'images/produits/image4.jpeg',
-            imageCaption: 'Jouet 3',
+            imageLocation: 'images/images19.jpeg',
+            imageCaption: 'Rebot',
           ),
         ],
       ),

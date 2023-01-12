@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   intl: ^0.18.0
   flutter_credit_card: ^3.0.4
+  google_maps_flutter: ^2.2.3
 
 dev_dependencies:
   flutter_test:
@@ -95,6 +96,31 @@ flutter:
     - images/bg.png
     - images/card_bg.png
     - images/mastercard.png
+    - images/image.jpeg
+    - images/images1.jpeg
+    - images/images2.jpeg
+    - images/images3.jpeg
+    - images/images4.jpeg
+    - images/images5.jpeg
+    - images/images6.jpeg
+    - images/images7.jpeg
+    - images/images8.jpeg
+    - images/images9.jpeg
+    - images/images10.jpeg
+    - images/images11.jpeg
+    - images/images12.jpeg
+    - images/images13.jpeg
+    - images/images14.jpeg
+    - images/images15.jpeg
+    - images/images16.jpeg
+    - images/images17.jpeg
+    - images/images18.jpeg
+    - images/images19.jpeg
+    - images/images20.jpeg
+    - images/images21.jpeg
+    - images/images22.jpeg
+    - images/images23.jpeg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

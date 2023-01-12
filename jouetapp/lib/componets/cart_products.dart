@@ -12,25 +12,25 @@ class Cart_products extends StatefulWidget {
 class _Cart_productsState extends State<Cart_products> {
   var Products_on_the_cart=[
     {
-      "name": "jouer 1",
-      "picture": "images/produits/image1.jpeg",
-      "price": 85,
+      "name": "Voiture",
+      "picture": "images/images1.jpeg",
+      "price": 18500,
+      "size": "M",
+      "color": "Red",
+      "quantity": 2,
+    },
+    {
+      "name": "Pistolet",
+      "picture": "images/images6.jpeg",
+      "price": 8000,
       "size": "M",
       "color": "Red",
       "quantity": 1,
     },
     {
-      "name": "jouer 6",
-      "picture": "images/produits/image6.jpeg",
-      "price": 105,
-      "size": "M",
-      "color": "Red",
-      "quantity": 1,
-    },
-    {
-      "name": "jouer 4",
-      "picture": "images/produits/image4.jpeg",
-      "price": 105,
+      "name": "Maison poupée",
+      "picture": "images/images14.jpeg",
+      "price": 12500,
       "size": "M",
       "color": "Red",
       "quantity": 1,
@@ -100,7 +100,7 @@ class Single_cart_product extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.topLeft,
-              child: Text("\$$cart_price", style: const TextStyle(fontSize: 17.0, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 162, 28, 64))),
+              child: Text("$cart_price Fr", style: const TextStyle(fontSize: 17.0, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 162, 28, 64))),
             ),
           ],
         ),

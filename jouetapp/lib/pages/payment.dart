@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/credit_card_brand.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
+import 'package:jouetapp/pages/map.dart';
 
 
 class MySample extends StatefulWidget {
@@ -211,6 +212,12 @@ class MySampleState extends State<MySample> {
                           onPressed: () {
                             if (formKey.currentState!.validate()) {
                               print('valid!');
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const MapSample(),
+                                ),
+                              );
                             } else {
                               print('invalid!');
                             }
